@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- MATERIAL DESIGN ICON -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Flexible Timetable</title>
+  </head>
+
+  <body class="body">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Timetable</a></li>
+          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <h2>Input Panel</h2>
+    <form class="" action="index.html" method="post">
+      <table id="timeRecordTable" class="table table-dark table-hover px-2" style="width: 800px;">
+        <tr>
+          <th>#.</th>
+          <th>Day</th>
+          <th>Period</th>
+          <th>Function</th>
+          <th>Task</th>
+          <th>Add</th>
+          <th>Delete</th>
+        </tr>
+        <tr class="timeRecordRow">
+          <td>1</td>
+          <td>
+            <select class="day" name="Day">
+              <option value="Sun">Sun</option>
+              <option value="Mon">Mon</option>
+              <option value="Tue">Tue</option>
+              <option value="Wed">Wed</option>
+              <option value="Thu">Thu</option>
+              <option value="Fri">Fri</option>
+              <option value="Sat">Sat</option>
+            </select>
+          </td>
+
+          <td>
+            <select class="period" name="Period">
+              <option value="Midnight">Midnight</option>
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+              <option value="Night">Night</option>
+            </select>
+          </td>
+
+          <td>
+            <select class="func" name="Group">
+              <option class="list-group-item list-group-item-warning" value="Work">Work</option>
+              <option class="list-group-item list-group-item-success" value="Entertainment">Entertainment</option>
+              <option class="list-group-item list-group-item-info" value="Necessity">Necessary</option>
+              <option class="list-group-item list-group-item-primary" value="Sleep">Sleep</option>
+              <option class="list-group-item list-group-item-dark" value="NA">NA</option>
+            </select>
+          </td>
+
+          <td>
+            <input class="task" type="text" name="" value="">
+          </td>
+
+          <td>
+            <!-- <input class="add" type="button" value="Add" onclick="addRow(this)"> -->
+            <i class="add material-icons" onclick="addRow(this)">add_circle</i>
+          </td>
+          <td>
+            <!-- <input class="remove" type="button" value="Delete" onclick="deleteRow(this)"> -->
+            <i class="remove material-icons" onclick="deleteRow(this)">delete</i>
+          </td>
+        </tr>
+      </table>
+      <input class="submit btn btn-primary" type="button" value="Submit">
+      <input class="export btn btn-warning" type="button" value="Export">
+      <input class="clear btn btn-danger" type="button" value="Clear">
+    </form>
+
+    <h2>Timetable</h2>
+    <table class="timetable table table-active table-hover px-2" style="width:800px;">
+      <tr>
+        <th>Time\Day</th>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+      <tr id='Midnight'>
+        <td>Midnight<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr id='AM'>
+        <td>AM<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr id='PM'>
+        <td>PM<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr id='Night'>
+        <td>Night<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </table>
+
+  </body>
+  <script src="index.js"></script>
+</html>

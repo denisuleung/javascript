@@ -1,0 +1,14 @@
+.body{
+  background-color: rgba(20, 130, 0, 0.4);
+  font-size: 14px;
+}
+
+/* table, th, td{
+  border: 0.5px solid black;
+  padding: 12px;
+} */
+
+h2{
+  color: rgb(10, 50, 120);
+  padding-top: 36px;
+}
